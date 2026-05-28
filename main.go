@@ -17,7 +17,7 @@ func main(){
 	defer file.Close()
 
 	for {
-		b := make([]byte,8,8)
+		b := make([]byte,8)
 		_, err := file.Read(b)
 		if err != nil{
 			if errors.Is(err, io.EOF){
